@@ -1,0 +1,6 @@
+python manage.py runserver 0.0.0.0:8000
+celery -A ByteverseProject worker --loglevel=info
+
+sudo systemctl restart gunicorn
+sudo systemctl reload nginx
+sudo systemctl restart celery
