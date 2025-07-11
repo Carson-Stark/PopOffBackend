@@ -160,6 +160,6 @@ To add new features or extend the backend API, follow these steps:
 3. **Add Views**: Implement API views or viewsets in `api/views.py` to expose endpoints that allow the frontend to create, read, update, or delete instances of your model. Ensure proper request handling and permissions.
 4. **Configure URLs**: Register your new API endpoints in `api/urls.py` by mapping URL patterns to the views you created. This makes the endpoints accessible to clients.
 5. **Make Migrations**: Run `python manage.py makemigrations` to generate migration files for your model changes, then run `python manage.py migrate` to apply these changes to the database schema.
-6. **Testing**: Add tests in `api/tests.py` to verify that your new model, serializers, views, and endpoints work correctly and handle edge cases. Run tests regularly to maintain code quality.
+6. **Integration**: Modify the fontend to make use of your new endpoints, and test!
 
 Following this process ensures your backend API can be safely and effectively extended to support new features and frontend requirements.
