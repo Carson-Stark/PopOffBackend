@@ -153,13 +153,13 @@ These commands assume you have Gunicorn and Nginx configured for your Django app
 
 ## Extending Functionality
 
-To add new features or extend the backend API:
+To add new features or extend the backend API, follow these steps:
 
-1. **Add Models**: Define new data models in `api/models.py`.
-2. **Create Serializers**: Add serializers for your models in `api/serializers.py` to control data representation.
-3. **Add Views**: Implement API views or viewsets in `api/views.py` to handle requests.
-4. **Configure URLs**: Register new endpoints in `api/urls.py`.
-5. **Migrations**: Run `python manage.py makemigrations` and `python manage.py migrate` to apply database changes.
-6. **Testing**: Add tests in `api/tests.py` to ensure your changes work correctly.
+1. **Add a Model**: Define a new data model in `api/models.py` to represent your entity type in the database. Specify fields, relationships, and any custom methods.
+2. **Create Serializers**: Add serializers for your new model in `api/serializers.py`. These control how model instances are converted to and from JSON or other content types for API communication.
+3. **Add Views**: Implement API views or viewsets in `api/views.py` to expose endpoints that allow the frontend to create, read, update, or delete instances of your model. Ensure proper request handling and permissions.
+4. **Configure URLs**: Register your new API endpoints in `api/urls.py` by mapping URL patterns to the views you created. This makes the endpoints accessible to clients.
+5. **Make Migrations**: Run `python manage.py makemigrations` to generate migration files for your model changes, then run `python manage.py migrate` to apply these changes to the database schema.
+6. **Testing**: Add tests in `api/tests.py` to verify that your new model, serializers, views, and endpoints work correctly and handle edge cases. Run tests regularly to maintain code quality.
 
-This modular structure allows easy expansion of the backend API to support new features and frontend requirements.
+Following this process ensures your backend API can be safely and effectively extended to support new features and frontend requirements.
