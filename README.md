@@ -133,7 +133,18 @@ These commands assume you have Gunicorn and Nginx configured for your Django app
 
 ## Project Structure
 
-- `api/`: Contains Django app code including models, views, serializers, tasks, and API endpoints.
+- `api/`: Contains the Django backend app with the following key components:
+  - `__init__.py`: Marks the directory as a Python package.
+  - `admin.py`: Registers models with the Django admin interface for management.
+  - `apps.py`: Configuration for the Django app.
+  - `models.py`: Defines the database schema with Django models.
+  - `serializers.py`: Converts complex data types like querysets and model instances to native Python datatypes for rendering into JSON or other content types.
+  - `views.py`: Contains the API views handling HTTP requests and responses.
+  - `urls.py`: Defines URL routing for the API endpoints.
+  - `tasks.py`: Contains asynchronous task definitions for Celery workers.
+  - `rank_video.py`: Implements video ranking logic including user preference embedding updates, engagement scoring, and video ranking calculations based on interest similarity, recentness, and engagement metrics.
+  - `download.py`, `local_video_ai.py`, `save_embeddings.py`, `test_embeddings.py`: Modules handling specific backend functionalities such as video processing, AI integration, embedding management, and testing.
+  - `data/`: Directory containing static data files used by the API, such as lists of censored words and video categories.
 - `utils/`: Contains utility scripts for data processing and maintenance:
   - `download_embeddings.py`: Downloads video embeddings and thumbnail links from the database and saves them as a CSV file.
   - `update_hls_paths.py`: Manages HLS video path updates in the database and S3 file migrations.
@@ -152,4 +163,3 @@ To add new features or extend the backend API:
 6. **Testing**: Add tests in `api/tests.py` to ensure your changes work correctly.
 
 This modular structure allows easy expansion of the backend API to support new features and frontend requirements.
-
