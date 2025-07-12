@@ -1,10 +1,12 @@
 ﻿# PopOff Backend
 
+## Project Overview
+
 PopOff is a short form video social media mobile app designed to replicate the core features of TikTok. The app allows users to create accounts, upload and share videos, interact with other users through likes, comments, and follows, and discover content through an intelligent recommendation algorithm. Built with a full stack approach, PopOff leverages React Native Expo for the mobile frontend, Django REST Framework for the backend API, PostgreSQL for data storage, and AWS for cloud infrastructure. The project was created as a challenge to build and deploy a TikTok clone within 24 hours, with the goal of launching on both the App Store and Play Store.
 
 > View the frontend repo and demo videos here: https://github.com/Carson-Stark/PopOffFrontend
 
-## Features
+### Features
 
 - User account creation and authentication
 - Video upload, storage, and streaming
@@ -14,6 +16,11 @@ PopOff is a short form video social media mobile app designed to replicate the c
 - Mobile frontend built with React Native Expo
 - PostgreSQL database for data persistence
 - AWS cloud infrastructure for storage and deployment
+
+### Project Timeline
+
+- **Started:** January 2025  
+- **Completed:** May 2025
 
 ## Installation / Setup
 
